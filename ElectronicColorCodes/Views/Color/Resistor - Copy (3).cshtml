@@ -1,0 +1,295 @@
+﻿@model ElectronicColorCodes.Models.ColorBands
+
+@{
+    ViewBag.Title = "Resistor Ohms Calculator";
+}
+
+<h2>Resistor</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="example">
+        <h4>Select the resistor you want to calculate the Ohms of by picking the color of each of the bands </h4>
+        <div class="demo-section hidden-on-narrow k-content wide">
+            <div id="resistor">
+                <div id="resistor-bandA"></div> <div id="resistor-bandB"></div><div id="resistor-bandC"></div><div id="resistor-bandD"></div>
+                <div id="office">
+                    <script>
+                        $("#office").kendoColorPalette({
+                            palette: [
+                                "#ffffff", "#000000", "#eeece1", "#1f497d", "#4f81bd", "#c0504d", "#9bbb59", "#8064a2", "#8064a2", "#f79646",
+                                "#f2f2f2", "#7f7f7f", "#ddd9c3", "#c6d9f0", "#dbe5f1", "#f2dcdb", "#ebf1dd", "#e5e0ec", "#dbeef3", "#fdeada",
+                                "#d8d8d8", "#595959", "#c4bd97", "#8db3e2", "#b8cce4", "#e5b9b7", "#d7e3bc", "#ccc1d9", "#b7dde8", "#fbd5b5",
+                                "#bfbfbf", "#3f3f3f", "#938953", "#548dd4", "#95b3d7", "#d99694", "#c3d69b", "#b2a2c7", "#92cddc", "#fac08f",
+                                "#a5a5a5", "#262626", "#494429", "#17365d", "#366092", "#953734", "#76923c", "#5f497a", "#31859b", "#e36c09",
+                                "#7f7f7f", "#0c0c0c", "#1d1b10", "#0f243e", "#244061", "#632423", "#4f6128", "#3f3151", "#205867", "#974806"
+                            ]
+                        })
+                    </script>
+                </div>
+            </div>
+            @*<div id="example">
+                <div class="box wide">
+                    <div class="box-col">
+                        <h4>Office</h4>*@
+
+                    </div>
+                    @*<div class="picker-wrapper">
+                    <div id="bandA" class="picker"></div>
+                    <div id="bandB" class="picker"></div>
+                    <div id="bandC" class="picker" title="Top Hello!"
+                         data-role="tooltip"
+                         data-auto-hide="false"
+                         data-position="top"
+                         data-bind="events: { show: onShow, hide: onHide }"></div>
+                    <div id="bandD" class="picker"></div>
+                </div>*@
+                @*</div>
+            </div>
+        </div>*@
+                <style>
+
+                        .demo-section {
+                            text-align: center;
+                            padding: 0 0 16px;
+                        }
+
+                        #resistor {
+                            margin: 0 0 10px;
+                            background: url(../Images/background.png);
+                        }
+
+                        #resistor-bandA, #resistor-bandB, #resistor-bandC, #resistor-bandD {
+                            background: url(../Images/shinyResistor.png);
+                            --width: calc(500px * 1);
+                            --height: calc(280px * 1);
+                            --endA: calc(var(--width) * (5/17.5));
+                            --endB: calc(var(--width) * (7.5/17.5));
+                            --endC: calc(var(--width) * (10/17.5));
+                            --endD: var(--width);
+                            display: inline-block;
+                            height: var(--height);
+                        }
+
+                        #resistor-bandA {
+                            background-color: #FF0000;
+                            width: var(--endA);
+                            /*background-position: calc(calc(var(--width)) var(--endA) * -1) 0;*/
+                        }
+
+                        #resistor-bandB {
+                            background-color: #FFC0CB;
+                            background-position: calc(var(--endA) * -1) 0;
+                            width: calc(var(--endB) - var(--endA) );
+                        }
+
+                        #resistor-bandC {
+                            background-color: #FFFF00;
+                            width: calc(var(--endC) - var(--endB));
+                            background-position: calc(var(--endB) * -1) 0;
+                        }
+
+                        #resistor-bandD {
+                            background-color: #FFD700;
+                            width: calc(var(--width) - var(--endC));
+                            background-position: calc(var(--endC) * -1) 0;
+                        }
+
+                        #bandA {
+                            position: relative;
+                            /*transform: translateX(-230%) translateY(-10%);*/
+                            /*width: 20px;
+                    height: 20px;*/
+                        }
+
+                        #bandB {
+                            position: relative;
+                            /*transform: translateX(-200%) translateY(-10%);*/
+                            /*font-size: 10px;
+                    width: 20px;
+                    height: 20px;*/
+                        }
+
+                        #bandC {
+                            position: relative;
+                            /*transform: translateX(-110%) translateY(-1%);*/
+                            /*width: 20px;
+                    height: 20px;*/
+                        }
+
+                        #bandD {
+                            position: relative;
+                            /*transform: translateX(300%) translateY(-1%);*/
+                        }
+
+                        .picker-wrapper {
+                            background-position: calc(calc(var(--width)) var(--endA) * -1) 0;
+                        }
+
+                            .picker-wrapper .k-hsv-gradient {
+                            }
+
+                            .picker-wrapper h3 {
+                            }
+
+                        .picker {
+                            /*width: 100px;
+                    height: 100px;*/
+                        }
+
+                        .k-item:hover {
+                            background: #ff0 none;
+                        }
+
+                        #result {
+                            border: 4px lightsteelblue solid;
+                            border-radius: 4px;
+                            padding: 6px;
+                            background-color: #eee;
+                        }
+                </style>
+                <script>
+
+
+
+                    function select(e) {
+
+                        $("#resistor-" + this.element.attr("id")).css("background-color", e.value);
+                        var counterArray = JSON.stringify({ "BandAColor": $("#bandA").data("kendoColorPalette").value(), "BandBColor": $("#bandB").data("kendoColorPalette").value(), "BandCColor": $("#bandC").data("kendoColorPalette").value(), "BandDColor": $("#bandD").data("kendoColorPalette").value() });
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Color/Calculate",
+                            data: "{'s':'" + counterArray + "'}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (response) {
+                                document.getElementById("result").innerHTML = "<strong>Result Value: " + response.ohm + " kΩ " + response.tolerance + "</strong>";
+                            },
+                            failure: function (response) {
+                                alert("FAILURE: " + response.responseText);
+                            },
+                            error: function (response) {
+                                alert("ERROR: " + response.responseText);
+                            }
+                        });
+                    };
+
+                    //function onShow(e) {
+                    //    $("#autohide-true").kendoTooltip({
+                    //        content: "Yes",
+                    //        show: onShow,
+                    //        hide: onHide,
+                    //        position: "top"
+                    //    });
+                    //    $("#autohide-false").kendoTooltip({
+                    //        autoHide: false,
+                    //        show: onShow,
+                    //        hide: onHide,
+                    //        position: "top",
+                    //        content: "no",
+                    //    });
+                    //};
+
+                    //function onShow(e) {
+                    //    //kendoConsole.log("event :: show");
+                    //}
+
+                    function onHide(e) {
+                        //kendoConsole.log("event :: hide");
+                    }
+
+                    //$(document).ready(function () {
+                    //    $(".k-item.k-state-border-down").kendoTooltip({
+                    //        content: HexToColourName($("#bandC").data("kendoColorPalette").value()),
+                    //        position: "top"
+                    //    });
+                    //    $("#bandC").kendoTooltip({
+                    //        autoHide: false,
+
+                    //        position: "top",
+                    //        content: HexToColourName($("#bandC").data("kendoColorPalette").value()),
+                    //    });
+                    //});
+                    $("#picker").kendoColorPicker({
+                        value: "#ffffff",
+                        buttons: false,
+                        select: preview
+                    });
+
+                    function preview(e) {
+                        $("#background").css("background-color", e.value);
+                    }
+
+                    //Colors Pink, Gold and Yellow are NA for BandA
+                    var colorpickerA = $("#bandA").kendoColorPalette({
+                        preview: false,
+                        value: "#000",
+                        change: select,
+                        tileSize: 5,
+                        columns: 2,
+                        palette: [
+                            "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
+                            "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
+                        ]
+                    });
+
+                    //Colors Pink, Gold and Yellow are NA for BandB
+                    $("#bandB").kendoColorPalette({
+                        preview: false,
+                        value: "#000",
+                        change: select,
+                        tileSize: 5,
+                        columns: 2,
+                        palette: [
+                            "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
+                            "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
+                        ]
+                    });
+
+                    $("#bandC").kendoColorPalette({
+                        preview: false,
+                        change: select,
+                        value: "#000",
+                        tileSize: 5,
+                        columns: 2,
+                        palette: [
+                            "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080", "#FFFFFF", "#000000",
+                            "#A52A2A", "#EE82EE", "#FFA500", "#FFD700", "#C0C0C0", "#FFC0CB"
+                        ]
+                    });
+
+                    $("#bandD").kendoColorPalette({
+                        preview: false,
+                        value: "#000",
+                        change: select,
+                        tileSize: 5,
+                        columns: 2,
+                        palette: [
+                            "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080", "#FFFFFF",
+                            "#000000", "#A52A2A", "#EE82EE", "#FFA500", "#FFD700", "#C0C0C0", "#FFC0CB"
+                            //"#ed1c24", "#fff200", "#22b14c", "#3f48cc", "#ff7f27", "#ffffff", "#c3c3c3", "#000000", "#7f7f7f", "#c0c0c0", "#ffd700"
+                        ]
+                    });
+
+                    function HexToColourName(colour) {
+                        var colours = {
+                            "#f0f8ff": "aliceblue", "#000000": "black", "#0000ff": "blue", "#a52a2a": "brown",
+                            "#ee82ee": "violet", "#ffffff": "white", "#ffff00": "yellow"
+                        };
+                        if (typeof colours[colour.toLowerCase()] != 'undefined')
+                            return colours[colour.toLowerCase()];
+
+                        return false;
+                    }
+                </script>
+                @Html.DisplayNameFor(model => model);
+            </div>
+            <div id="result" style="float:right">
+                <strong>Resistor value:</strong>
+            </div>
+</body>
+</html>

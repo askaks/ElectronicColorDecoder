@@ -1,0 +1,153 @@
+﻿@model ElectronicColorCodes.Models.ColorBands
+
+@{
+    ViewBag.Title = "Resistor Ohms Calculator";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/kendo")
+
+
+    @*<link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>*@
+
+
+</head>
+<body>
+    <div id="example">
+
+        <div class="demo-section hidden-on-narrow k-content wide">
+            <div class="box wide">
+                @*<div class="resistor">*@
+                <div class="box-col" id="resistor-bandA">
+                    <div id="bandA"></div>
+                </div>
+                <div class="box-col" id="resistor-bandB">
+                    @*<div class="product-image" src="../Images/shinyResistor.png" alt="" width="500" height="280">*@
+
+                    <div id="bandB"></div>
+                </div>
+            </div>
+            </div>
+            @*<div class="product-info">
+                <h3>Natural Linen Loveseat</h3>
+                <p>Add comfortable seating to your living room or den. The soft foam in the cushions make this loveseat a great place to relax.</p>
+                <dl>
+                    <dt>Dimensions</dt>
+                    <dd>34" D x 52" W x 31" H</dd>
+
+                    <dt>Materials</dt>
+                    <dd>Wood, Fabric, Foam</dd>
+
+                    <dt>Assembly</dt>
+                    <dd>No Assembly Required</dd>
+                </dl>
+
+                <button class="k-primary k-button">Add to cart</button>
+            </div>*@
+
+
+        <div class="responsive-message"></div>
+
+        <script>
+            function select(e) {
+                //$("#product-image" + this.element.attr("id")).css("background-color", e.value);
+                var colorId = this.value().substring(1);
+                //$(".product-image").attr("src", "../Images/sofa-" + colorId + ".jpg");
+                $(".resistor").css("background-color", e.value);
+            };
+
+            $("#bandA").kendoColorPalette({
+                palette: [
+                    "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
+                    "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
+                ],
+                tileSize: 10,
+                value: "#ffcc33",
+                change: select
+            });
+
+            $("#bandB").kendoColorPalette({
+                palette: [
+                    "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
+                    "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
+                ],
+                tileSize: 10,
+                value: "#ffcc33",
+                change: select
+            });
+            //$("#bandA").kendoColorPalette({
+            //    palette: ["#ddd1c3", "#d2d2d2", "#746153", "#3a4c8b", "#ffcc33", "#fb455f", "#ac120f"],
+            //    tileSize: 30,
+            //    value: "#ffcc33",
+            //    change: function () {
+            //        var colorId = this.value().substring(1);
+            //        $(".product-image").attr("src", "../Images/sofa-" + colorId + ".jpg");
+            //    }
+            //});
+        </script>
+
+        <style>
+            .box-col {
+                display: inline-block;
+            }
+            /*.demo-section {
+                overflow: hidden;
+                padding: 0;
+            }
+
+            .product-display, .product-info {
+                float: left;
+            }*/
+
+            /*.product-display {
+                background-color: #fff;
+                background: url(../Images/background.png);
+                height: 450px;
+                width: 900px;
+                margin: -10px 4%;
+                text-align: center;
+            }*/
+
+            .resistor {
+                /*display: block;
+                margin: 56px auto;
+                background: url(../Images/shinyResistor.png);
+                width: 500px;
+                height: 280px;*/
+            }
+            #resistor-bandA {
+                /*display: block;
+                margin: 56px auto;*/
+                background: url(../Images/shinyResistor.png);
+                width: 100px;
+                height: 280px;
+            }
+            #resistor-bandB {
+                /*display: block;
+                margin: 56px auto;*/
+                background: url(../Images/shinyResistor.png);
+                width: 100px;
+                height: 280px;
+            }
+
+        </style>
+
+    </div>
+
+
+</body>
+</html>

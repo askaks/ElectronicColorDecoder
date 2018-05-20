@@ -98,7 +98,7 @@ namespace OhmCalculator
         {
             double[] tolerance = new double[2];
             ColorCodes bandD = StringToEnum<ColorCodes>(bandDColor);
-            tolerance[0] = TableLookup(bandD, Bands.ToleranceDNegative);
+            tolerance[0] = TableLookup(bandD, Bands.ToleranceDPositive);
             tolerance[1] = TableLookup(bandD, Bands.ToleranceDNegative);
             return tolerance;
         }
