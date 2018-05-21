@@ -129,10 +129,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\accent.png" />
-    <Content Include="Images\background.png" />
     <Content Include="Images\bullet.png" />
-    <Content Include="Images\shinyResistor.png" />
-    <Content Include="Images\ShinyResistorvs2.png" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

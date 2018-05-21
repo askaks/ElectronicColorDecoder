@@ -32,7 +32,7 @@
         <h4>Select the resistor you want to calculate the Ohms of by picking the color of each of the bands </h4>
         <div class="demo-section hidden-on-narrow k-content wide">
             <div class="box wide">
-                <div class="resistor">
+                <div class="resistor" id="resistor">
                     <div class="box-col" id="resistor-bandA">
                         <div id="bandA"></div>
                     </div>
@@ -47,17 +47,15 @@
                     </div>
 
                 </div>
-                <div id="result" >
-                    <strong>Resistor value:</strong>
-                </div>
+
             </div>
         </div>
-        @Html.DisplayNameFor(model => model);
+        @Html.DisplayNameFor(model => model)
 
     </div>
-    <footer>
-
-        </footer>
+    <div id="result" style="float:right">
+        <strong>Resistor value:</strong>
+    </div>
 </body>
 
 </html>
@@ -70,8 +68,8 @@
 
 
     :root {
-        --width: calc(500px * 1);
-        --height: calc(280px * 1);
+        --width: calc(800px * 1);
+        --height: calc(448px * 1);
         --endA: calc(var(--width) * (4.2/17.5));
         --endB: calc(var(--width) * (7.5/17.5));
         --endC: calc(var(--width) * (13/17.5));
@@ -102,8 +100,8 @@
     }
 
     #resistor-bandA, #resistor-bandB, #resistor-bandC, #resistor-bandD {
-        background: url(../Images/shinyResistor.png);
-        height: 280px;
+        background: url(../Images/shinyResistorLg.png);
+        height: var(--height);
     }
     #result {
         border: 4px lightsteelblue solid;
@@ -111,27 +109,23 @@
         padding: 6px;
         background-color: #eee;
     }
-    /*.demo-section {
-                overflow: hidden;
-                padding: 0;
-            }
-
-            .product-display, .product-info {
-                float: left;
-            }*/
-    /*.product-display {
-                background-color: #fff;
-                background: url(../Images/background.png);
-                height: 450px;
-                width: 900px;
-                margin: -10px 4%;
-                text-align: center;
-            }*/
-    .resistor {
-        background: url(../Images/background.png);
-        margin-left: auto;
+    #resistor {
+        margin: 0 0 10px;
+        background: url(../Images/backgroundLg.png);
+        width: 100%;
+        height: 500px;
+    }
+        .resistor {
+        margin: 0 0 10px;
+        background: url(../Images/backgroundLg.png);
+        width:100%;
+        height:500px;
+        padding: 0 150px;
+        /*width:900px;
+        height:500px;*/
+        /*margin-left: auto;
         margin-right: auto;
-        height:var(--height);
+        height: var(--height);*/
     }
 
     #resistor-bandA {
@@ -187,7 +181,7 @@
             "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
             "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
         ],
-        tileSize: 14,
+        tileSize: 20,
         value: "#ffcc33",
         columns: 2,
         change: select
@@ -198,7 +192,7 @@
             "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080",
             "#FFFFFF", "#000000", "#A52A2A", "#EE82EE", "#FFA500"
         ],
-        tileSize: 14,
+        tileSize: 20,
         value: "#ffcc33",
         change: select
     });
@@ -208,7 +202,7 @@
                     "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080", "#FFFFFF", "#000000",
                     "#A52A2A", "#EE82EE", "#FFA500", "#FFD700", "#C0C0C0", "#FFC0CB"
         ],
-        tileSize: 14,
+        tileSize: 20,
         value: "#ffcc33",
         change: select
     });
@@ -218,7 +212,7 @@
                     "#FF0000", "#0000FF", "#008000", "#FFA500", "#808080", "#FFFFFF",
                     "#000000", "#A52A2A", "#EE82EE", "#FFA500", "#FFD700", "#C0C0C0", "#FFC0CB"
         ],
-        tileSize: 14,
+        tileSize: 20,
         columns: 2,
         value: "#ffcc33",
         change: select

@@ -1,4 +1,3 @@
-C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.Mvc.xml
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\ApplicationInsights.config
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\ElectronicColorCodes.dll.config
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\ElectronicColorCodes.dll
@@ -17,6 +16,7 @@ C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\Sys
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\WebGrease.dll
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\OhmCalculator.pdb
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.Helpers.xml
+C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.Mvc.xml
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.Optimization.xml
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.Razor.xml
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.WebPages.xml
