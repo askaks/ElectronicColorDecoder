@@ -44,9 +44,9 @@ namespace ElectronicColorCodes.Controllers
                 int tolerance = 0;
                 if (tolerancePercent[0] > 0)
                 {
-                    tolerance = (int)tolerancePercent[0] * (int)ohmValue;
+                    tolerance = (int)((tolerancePercent[0] /100)* ohmValue);
                 }
-                meaningfulTolerance = tolerance == 0 ? meaningfulTolerance : "±" + meaningfulTolerance;
+                meaningfulTolerance = tolerance == 0 ? "" : "±" + tolerance;
 
          
 
