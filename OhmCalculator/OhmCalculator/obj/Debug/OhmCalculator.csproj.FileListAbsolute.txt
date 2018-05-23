@@ -14,3 +14,4 @@ C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\
 C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Debug\OhmCalculator.csproj.CoreCompileInputs.cache
 C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Debug\OhmCalculator.dll
 C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Debug\OhmCalculator.pdb
+C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Debug\OhmCalculator.csprojResolveAssemblyReference.cache
