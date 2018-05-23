@@ -11,10 +11,24 @@ Built using Telerik's KendoUI opensource version "kendo-ui-core" found at https:
 
 The solution should build as is.
 
-***ALL of the necdessary files for a SUCCESSFUL build of this solution have been INCLUDED in this repository ***
+
+#### ***ALL of the necdessary files for a SUCCESSFUL build of this solution have been INCLUDED in this repository ***
+
+If however one is interested in the opensource KendoUI files, the instructions taken directly from their repository have been appended to the end of this document.
 
 
-If however one is interested in the opensource KendoUI files below are the instructions taken directly from their repository:
+## Built With
+
+Visual Studio 2017
+.NET Framework 4.61
+Microsoft.AspNet.Mvc version="5.2.3"
+bootstrap version="3.3.2"
+jQuery version="1.10.2"
+NUnit 3.10.1
+
+
+
+## Kendo UI Core Instructions For Those Interested
 
 How to build Kendo UI Core from (https://github.com/telerik/kendo-ui-core):
         Clone a copy of the repository by running
@@ -32,18 +46,4 @@ How to build Kendo UI Core from (https://github.com/telerik/kendo-ui-core):
 
 	take the contents of the 'js' folder from the above and paste into this project's ..\Scripts\kendo
 	take th contents of the 'styles' folder from the aboveand paste into this project's ..Styles\kendo
-
-
-
-
-
-## Built With
-
-Visual Studio 2017
-.NET Framework 4.61
-Microsoft.AspNet.Mvc version="5.2.3"
-bootstrap version="3.3.2"
-jQuery version="1.10.2"
-NUnit 3.10.1
-
 
