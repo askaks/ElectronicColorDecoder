@@ -11,8 +11,7 @@ Built using Telerik's KendoUI opensource version "kendo-ui-core" found at https:
 
 The solution should build as is.
 
-***All of the necessary files for a successful build of this solution have been INCLUDED in this repository ***
-
+***ALL of the necdessary files for a SUCCESSFUL build of this solution have been INCLUDED in this repository ***
 
 
 If however one is interested in the opensource KendoUI files below are the instructions taken directly from their repository:
@@ -31,8 +30,8 @@ How to build Kendo UI Core from (https://github.com/telerik/kendo-ui-core):
 
         npm run build
 
-		take the contents of the 'js' folder from the above and paste into this project's ..\Scripts\kendo
-		take th contents of the 'styles' folder from the aboveand paste into this project's ..Styles\kendo
+	take the contents of the 'js' folder from the above and paste into this project's ..\Scripts\kendo
+	take th contents of the 'styles' folder from the aboveand paste into this project's ..Styles\kendo
 
 
 
