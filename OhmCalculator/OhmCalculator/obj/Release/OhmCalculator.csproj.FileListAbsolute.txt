@@ -1,3 +1,0 @@
-C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\bin\Release\OhmCalculator.dll
-C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Release\OhmCalculator.csproj.CoreCompileInputs.cache
-C:\Development\GitHub\Projects\ElectronicColorCodes\OhmCalculator\OhmCalculator\obj\Release\OhmCalculator.dll

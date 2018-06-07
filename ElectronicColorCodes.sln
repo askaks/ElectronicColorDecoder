@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicColorCodes", "ElectronicColorCodes\ElectronicColorCodes.csproj", "{FEEC327C-D375-43B0-97DF-752D5502506F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhmCalculator", "OhmCalculator\OhmCalculator\OhmCalculator.csproj", "{BF82F45E-01BC-40FB-A5C7-6BCD4356EDEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhmCalculator", "ElectronicColorCodes\OhmCalculator\OhmCalculator\OhmCalculator.csproj", "{BF82F45E-01BC-40FB-A5C7-6BCD4356EDEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhmCalculatorTests", "OhmCalculator\OhmCalculatorTests\OhmCalculatorTests.csproj", "{9B11CE7A-D21D-44E2-B2D1-818FCBD9980B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OhmCalculatorTests", "ElectronicColorCodes\OhmCalculator\OhmCalculatorTests\OhmCalculatorTests.csproj", "{9B11CE7A-D21D-44E2-B2D1-818FCBD9980B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

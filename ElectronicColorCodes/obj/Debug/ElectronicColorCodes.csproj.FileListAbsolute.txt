@@ -24,7 +24,6 @@ C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\Sys
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\System.Web.WebPages.Razor.xml
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\Antlr3.Runtime.pdb
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\bin\Newtonsoft.Json.xml
-C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.csprojResolveAssemblyReference.cache
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.csproj.CoreCompileInputs.cache
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.csproj.CopyComplete
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.dll

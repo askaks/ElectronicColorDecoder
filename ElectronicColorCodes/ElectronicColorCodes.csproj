@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -161,7 +161,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OhmCalculator\OhmCalculator\OhmCalculator.csproj">
+    <ProjectReference Include="OhmCalculator\OhmCalculator\OhmCalculator.csproj">
       <Project>{BF82F45E-01BC-40FB-A5C7-6BCD4356EDEB}</Project>
       <Name>OhmCalculator</Name>
     </ProjectReference>
