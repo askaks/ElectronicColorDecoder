@@ -1,0 +1,8 @@
+
+
+before_build:
+- cmd: nuget restore
+build:
+  verbosity: normal
+  project: $(SOLUTION)
+  publish_wap: true
