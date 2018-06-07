@@ -28,3 +28,4 @@ C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Deb
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.csproj.CopyComplete
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.dll
 C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.pdb
+C:\Development\GitHub\Projects\ElectronicColorCodes\ElectronicColorCodes\obj\Debug\ElectronicColorCodes.csprojResolveAssemblyReference.cache
