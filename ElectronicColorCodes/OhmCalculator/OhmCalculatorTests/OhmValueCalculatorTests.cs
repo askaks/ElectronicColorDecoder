@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OhmCalculator;
-using System;
 using System.Collections;
 using System.Linq;
 
